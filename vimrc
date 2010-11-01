@@ -28,11 +28,8 @@ if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
     set fileencodings=utf-8,latin2
 endif
 
-set pastetoggle=<F2>
-nnoremap <F3> :set nonumber!<CR>
-
 set viminfo='10,\"2000,:20,%,n~/.viminfo
-set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %-14.(%l,%c%V%)\ %P
+set statusline=%<%f\ %h%m%r%=%{\"[\".(&fenc==\"\"?&enc:&fenc).((exists(\"+bomb\")\ &&\ &bomb)?\",B\":\"\").\"]\ \"}%k\ %{fugitive#statusline()}\ %-14.(%l,%c%V%)\ %P
 set laststatus=2
 
 set background=dark
@@ -57,6 +54,9 @@ syntax on
 if has("autocmd")
   filetype plugin indent on
 endif
+
+set pastetoggle=<F2>
+nnoremap <F3> :set nonumber!<CR>
 
 " Bubble single lines
 nmap <C-Up> [e
