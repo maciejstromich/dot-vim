@@ -19,3 +19,6 @@
 [submodule "bundle/ruby"]
 	path = bundle/ruby
 	url = http://github.com/vim-ruby/vim-ruby.git
+[submodule "bundle/psql"]
+	path = bundle/psql
+	url = http://github.com/vim-scripts/psql.vim.git
