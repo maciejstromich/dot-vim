@@ -22,3 +22,6 @@
 [submodule "bundle/psql"]
 	path = bundle/psql
 	url = http://github.com/vim-scripts/psql.vim.git
+[submodule "bundle/VimClojure"]
+	path = bundle/VimClojure
+	url = http://github.com/vim-scripts/VimClojure.git
