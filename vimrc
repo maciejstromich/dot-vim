@@ -65,3 +65,7 @@ nmap <C-Down> ]e
 " Bubble multiple lines
 vmap <C-Up> [egv
 vmap <C-Down> ]egv
+
+" restore position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+
