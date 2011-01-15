@@ -12,11 +12,18 @@ colorscheme underley
 helptags ~/.vim/doc
 
 if &bg == "dark"
-  highlight MatchParen ctermbg=darkblue guibg=blue
+  hi MatchParen ctermbg=darkblue guibg=blue
 endif
 
-highlight Pmenu ctermfg=0 ctermbg=3
-highlight PmenuSel ctermfg=0 ctermbg=7
+hi Pmenu ctermfg=0 ctermbg=3
+hi PmenuSel ctermfg=0 ctermbg=7
+
+let g:indent_guides_auto_colors = 0
+let g:indent_guides_guide_size = 1
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=233
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
+
+autocmd VimEnter,BufNewFile,BufRead *.rb,*.php,*.py,*.pl,*.rake,*.css,*.html,Rakefile :IndentGuidesEnable
 
 if has("gui_running")
   set guifont=DejaVu\ Sans\ Mono\ 11
@@ -55,8 +62,11 @@ if has("autocmd")
   filetype plugin indent on
 endif
 
+let mapleader = ','
+
 set pastetoggle=<F2>
 nnoremap <F3> :set nonumber!<CR>
+nnoremap <F4> :IndentGuidesToggle<CR>
 
 " Bubble single lines
 nmap <C-Up> [e
