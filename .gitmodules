@@ -25,3 +25,6 @@
 [submodule "bundle/VimClojure"]
 	path = bundle/VimClojure
 	url = http://github.com/vim-scripts/VimClojure.git
+[submodule "bundle/vim-indent-guides"]
+	path = bundle/vim-indent-guides
+	url = git://github.com/nathanaelkane/vim-indent-guides.git
