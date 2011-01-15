@@ -18,17 +18,16 @@ endif
 hi Pmenu ctermfg=0 ctermbg=3
 hi PmenuSel ctermfg=0 ctermbg=7
 
-let g:indent_guides_auto_colors = 0
-let g:indent_guides_guide_size = 1
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=233
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
-
-autocmd VimEnter,BufNewFile,BufRead *.rb,*.php,*.py,*.pl,*.rake,*.css,*.html,Rakefile :IndentGuidesEnable
-
 if has("gui_running")
   set guifont=DejaVu\ Sans\ Mono\ 11
   set co=160
   set lines=52
+else
+  let g:indent_guides_auto_colors = 0
+  let g:indent_guides_guide_size = 1
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=233
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
+  autocmd VimEnter,BufNewFile,BufRead *.rb,*.php,*.py,*.pl,*.rake,*.css,*.html,Rakefile :IndentGuidesEnable
 endif
 
 if v:lang =~ "utf8$" || v:lang =~ "UTF-8$"
