@@ -26,7 +26,7 @@ else
   let g:indent_guides_auto_colors = 0
   let g:indent_guides_guide_size = 1
   autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=233
-  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
+  autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=232
   autocmd VimEnter,BufNewFile,BufRead *.rb,*.php,*.py,*.pl,*.rake,*.css,*.html,Rakefile :IndentGuidesEnable
 endif
 
