@@ -51,6 +51,8 @@ set wildignore=.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*
 set autoindent
 set smartindent
 
+set modeline
+
 set hidden
 set vb t_vb=
 set ts=2 sts=2 sw=2 expandtab
